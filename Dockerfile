@@ -1,5 +1,5 @@
 FROM microsoft/dotnet:runtime
-EXPOSE 5000:5000
+EXPOSE 5000:9200
 COPY . .
 RUN apt-get update && apt-get install -y \
   git \
