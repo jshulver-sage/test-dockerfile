@@ -4,7 +4,7 @@ ENV ASPNETCORE_URLS http://+:5000
 
 COPY . .
 
-RUN["find", "."]
+RUN ["find", "."]
 RUN apt-get update && apt-get install -y \
   git \
   wget
