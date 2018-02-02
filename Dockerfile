@@ -1,5 +1,7 @@
 FROM microsoft/dotnet:runtime
-EXPOSE 5000:9200
+EXPOSE 5000:5000
+ENV ASPNETCORE_URLS http://+:5000
+
 COPY . .
 RUN apt-get update && apt-get install -y \
   git \
