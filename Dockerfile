@@ -4,7 +4,7 @@ ENV ASPNETCORE_URLS http://+:5000
 
 WORKDIR /work
 
-COPY .. .
+COPY . .
 RUN set +e && find . && set -e
 
 RUN apt-get update && apt-get install -y \
