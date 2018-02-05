@@ -4,15 +4,11 @@ ENV ASPNETCORE_URLS http://+:5000
 
 WORKDIR /work
 
-COPY . .
+COPY .. .
 RUN set +e && find . && set -e
 
 RUN apt-get update && apt-get install -y \
   git \
   wget
 
-
-# RUN ["sh", "-c", "wget https://github.com/jshulver-sage/test-dockerfile/releases/download/$(cat version/version)/release.tgz"]
-# RUN tar -xzf release.tgz
-
-ENTRYPOINT ["dotnet", "app-repo/bin/release/netcoreapp2.0/publish/dotnet-core-hello-world.dll"]
+ENTRYPOINT ["dotnet", "release/dotnet-core-hello-world.dll"]
